@@ -19,9 +19,9 @@ public class Board extends JFrame {
                 squares[i][j] = new JPanel();
                 //to tyler, the % is used to determain the remainder to determain color
                 if ((i + j) % 2 == 0) {
-                    squares[i][j].setBackground(Color.WHITE);
+                    squares[i][j].setBackground(new Color (170, 160, 150));
                 } else {
-                    squares[i][j].setBackground(Color.BLACK);
+                    squares[i][j].setBackground(new Color (40, 30, 30));
                 }
                 add(squares[i][j]);
             }
