@@ -1,14 +1,34 @@
 import javax.swing.JFrame;
 import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.GridLayout;
 public class Board extends JFrame {
-    public Board() {
-        setTitle("Game Board");
-        setSize(800, 800);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        getContentPane().setBackground(new Color(25, 10, 10));
-        setResizable(false);
-        setVisible(true);
-    }
 
-    
+    public JPanel[][] squares;
+
+    public Board() {
+        setTitle("Simple Chess Board");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new GridLayout(8, 8));
+
+        squares = new JPanel[8][8];
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                squares[i][j] = new JPanel();
+                //to tyler, the % is used to determain the remainder to determain color
+                if ((i + j) % 2 == 0) {
+                    squares[i][j].setBackground(Color.WHITE);
+                } else {
+                    squares[i][j].setBackground(Color.BLACK);
+                }
+                add(squares[i][j]);
+            }
+        }
+
+        setSize(500, 500);
+        setResizable(false); 
+        setVisible(true); 
+    }
 }
