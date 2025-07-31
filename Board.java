@@ -8,7 +8,7 @@ public class Board extends JFrame {
     public JPanel[][] squares;
 
     public Board() {
-        setTitle("Simple Chess Board");
+        setTitle("Kayden's Chess Board");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(8, 8));
 
@@ -27,7 +27,7 @@ public class Board extends JFrame {
             }
         }
 
-        setSize(500, 500);
+        setSize(800, 800);
         setResizable(false); 
         setVisible(true); 
     }
