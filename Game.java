@@ -8,9 +8,9 @@ public class Game {
         Scanner scan = new Scanner(System.in);
         Random rand = new Random();
         JFrame frame = new JFrame("Game Window");   
-      
-     Board board = new Board();
-
+      Start start = new Start();
+        
+     
 
 
 
