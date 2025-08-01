@@ -5,11 +5,11 @@ import java.awt.Color;
 
 public class Game {
     public static void main(String [] args){
-        Scanner scan = new Scanner(System.in);
-        Random rand = new Random();
-        JFrame frame = new JFrame("Game Window");   
-      Start start = new Start();
-        
+        //Scanner scan = new Scanner(System.in);
+        //Random rand = new Random();
+        //JFrame frame = new JFrame("Game Window");   
+        Menu menu = new Menu();
+        menu.display();
      
 
 
@@ -18,6 +18,6 @@ public class Game {
 
 
 
-       scan.close();
+           // scan.close();
         }
     }
