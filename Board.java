@@ -1,6 +1,7 @@
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.ImageIcon;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -18,7 +19,7 @@ public class Board extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());;
         JButton back = new JButton("back to menu");
-        JLabel one = new JLabel("1");
+        JLabel one = new JLabel("1");  
         JLabel two = new JLabel("2");
         JLabel three = new JLabel("3");
         JLabel four = new JLabel("4");
@@ -118,7 +119,6 @@ public class Board extends JFrame {
                 myboard.add(squares);
             }
         }
-    
         player1.setPreferredSize(new Dimension(100,100));
         player2.setPreferredSize(new Dimension(100,100));
         left.setPreferredSize(new Dimension(100,100));
@@ -136,5 +136,7 @@ public class Board extends JFrame {
         setSize(800, 800);
         setResizable(false); 
         setVisible(false); 
+        
+      
     }
 }

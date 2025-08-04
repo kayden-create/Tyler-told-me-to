@@ -1,8 +1,5 @@
 import javax.swing.JFrame;
 import java.awt.Color;
-import java.awt.Desktop.Action;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
 import javax.swing.JLabel;
