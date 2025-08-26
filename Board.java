@@ -10,11 +10,13 @@ import java.awt.Dimension;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.GridLayout;
-public class Board extends JFrame {
 
+public class Board extends JFrame {
+    JPanel myboard;
     public JPanel squares;
 
     public Board() {
+       
         setTitle("Kayden's Chess Board");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());;
@@ -51,6 +53,8 @@ public class Board extends JFrame {
         add(f);
         add(g);
         add(h);
+         
+        
         a.setBounds(167, 613, 50, 50);
         b.setBounds(237, 613, 50, 50);
         c.setBounds(307, 613, 50, 50);
@@ -85,7 +89,7 @@ public class Board extends JFrame {
         eight.setForeground(new Color(0, 0, 0));
         JLabel name = new JLabel("Player 1");
         JLabel name2 = new JLabel("Player 2");
-        JPanel myboard = new JPanel();
+        myboard = new JPanel();
         JPanel player1 = new JPanel();
         JPanel player2 = new JPanel();
         JPanel left = new JPanel();
@@ -103,9 +107,9 @@ public class Board extends JFrame {
        myboard.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         back.addActionListener(e -> {
-           Menu menu = new Menu();
-           menu.display();
-              this.dispose(); // Close the board window
+            //Menu menu = new Menu(new);
+            //menu.display();
+            this.dispose(); // Close the board window
         });
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
@@ -119,6 +123,11 @@ public class Board extends JFrame {
                 myboard.add(squares);
             }
         }
+        
+
+        
+       
+
         player1.setPreferredSize(new Dimension(100,100));
         player2.setPreferredSize(new Dimension(100,100));
         left.setPreferredSize(new Dimension(100,100));
@@ -128,15 +137,17 @@ public class Board extends JFrame {
         left.setBackground(new Color(200, 200, 200));
         right.setBackground(new Color(200, 200, 200));
         myboard.setBounds(100,100, 600, 600);
-        this.add(myboard, BorderLayout.CENTER);
         add(player1, BorderLayout.SOUTH);
         add(player2, BorderLayout.NORTH);   
         add(left, BorderLayout.WEST);
         add(right, BorderLayout.EAST);
+    }
+
+    public void setup() {
+        this.add(myboard, BorderLayout.CENTER);
         setSize(800, 800);
         setResizable(false); 
         setVisible(false); 
-        
-      
     }
+  
 }

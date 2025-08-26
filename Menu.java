@@ -8,8 +8,8 @@ import javax.swing.JButton;
 
 public class Menu extends JFrame{
     JButton button, button2, button3;
-    
-    public Menu() {
+
+    public Menu(Board board) {
         JPanel panel = new JPanel();
         panel.setLayout(null);
         button = new JButton("Start Chess Game");
@@ -36,7 +36,6 @@ public class Menu extends JFrame{
         button.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 16));
         button.addActionListener(e -> {
             System.out.println("Chess Game Started");
-            Board board = new Board();
             board.setVisible(true);
             this.dispose(); // Close the start window
         });
@@ -47,7 +46,6 @@ public class Menu extends JFrame{
         button2.setFont(new java.awt.Font("Arial", java.awt.Font.BOLD, 16));
         button2.addActionListener(e -> {
             System.out.println("Checkers Game Started");
-            Board board = new Board();
             board.setVisible(true);
             this.dispose(); // Close the start window
         });
