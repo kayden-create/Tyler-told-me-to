@@ -14,13 +14,13 @@ import java.awt.GridLayout;
 public class Board extends JFrame {
     JPanel myboard;
     public JPanel squares;
-
+   JButton back;
     public Board() {
        
         setTitle("Kayden's Chess Board");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());;
-        JButton back = new JButton("back to menu");
+        back = new JButton("back to menu");
         JLabel one = new JLabel("1");  
         JLabel two = new JLabel("2");
         JLabel three = new JLabel("3");
@@ -106,11 +106,7 @@ public class Board extends JFrame {
        left.add(back);
        myboard.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        back.addActionListener(e -> {
-            //Menu menu = new Menu(new);
-            //menu.display();
-            this.dispose(); // Close the board window
-        });
+      
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 squares = new JPanel();
@@ -147,7 +143,10 @@ public class Board extends JFrame {
         this.add(myboard, BorderLayout.CENTER);
         setSize(800, 800);
         setResizable(false); 
-        setVisible(false); 
+        setVisible(true); 
     }
-  
+  void undisplay() {
+        setVisible(false);
+    }
+
 }
