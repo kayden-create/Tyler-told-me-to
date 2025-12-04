@@ -1,4 +1,4 @@
-import javax.swing.ImageIcon;
+//import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 public interface Piece {
     JLabel drawPiece();
