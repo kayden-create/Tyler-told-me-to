@@ -12,7 +12,7 @@ public class Game {
         //Random rand = new Random();
         //JFrame frame = new JFrame("Game Window");   
         Board board = new Board();
-     Menu menu = new Menu();
+        Menu menu = new Menu();
 
         
         menu.display();
@@ -20,35 +20,36 @@ public class Game {
     
         for(int i = 0; i < 2; i++) {
             for(int j = 0; j < 16; j++) {
-        if(i == 0) {
-                pieces[i][j] = new Pawn(); // Example: initializing all pieces as Pawns
-                if(j < 8) {
-                    pieces[i][j].setBounds(118 + 71 * j, 116 + 71 * i, 50, 50); // Set bounds for each piece
-                } else {
-                    pieces[i][j].setBounds(118 + 71 * (j - 8), 116 + 71 * (i + 1), 50, 50); // Set bounds for each piece
-                }
-                board.add(pieces[i][j].drawPiece());
+                if(i == 0) {
+                    pieces[i][j] = new Pawn(PieceColor.BLACK);
+                    if(j < 8) {
+                        pieces[i][j].setBounds(118 + 71 * j, 116 + 71 * i, 50, 50); // Set bounds for each piece
+                    } else {
+                        pieces[i][j].setBounds(118 + 71 * (j - 8), 116 + 71 * (i + 1), 50, 50); // Set bounds for each piece
+                    }
+                    board.add(pieces[i][j].drawPiece());
                     // Initialize pieces for player 1
                 }
-         else {
-                pieces[i][j] = new whitepawn(); // Example: initializing all pieces as Pawns
-                if(j < 8) {
-                    pieces[i][j].setBounds(118 + 71 * j,447 + 71 * i, 50, 50); // Set bounds for each piece
-                } else {
-                    pieces[i][j].setBounds(118 + 71 * (j - 8), 447 + 71 * (i + 1), 50, 50); // Set bounds for each piece
-                }
-                board.add(pieces[i][j].drawPiece());
+                else {
+                    pieces[i][j] = new Pawn(PieceColor.WHITE); 
+                    if(j < 8) {
+                        pieces[i][j].setBounds(118 + 71 * j,447 + 71 * i, 50, 50); // Set bounds for each piece
+                    } else {
+                        pieces[i][j].setBounds(118 + 71 * (j - 8), 447 + 71 * (i + 1), 50, 50); // Set bounds for each piece
+                    }
+                    board.add(pieces[i][j].drawPiece());
                     // Initialize pieces for player 2
                 }
-                
+
             }
         }
         
- menu.button.addActionListener(e -> {
+        menu.button.addActionListener(e -> {
             System.out.println("Chess Game Started");
             board.setup();
             menu.undisplay(); // Close the start window
         });
+
          menu.button2.addActionListener(e -> {
             System.out.println("Checkers Game Started");
             board.setup();
@@ -60,7 +61,8 @@ public class Game {
             System.exit(0); // Exit the game
             menu.undisplay();
         });
-      board.back.addActionListener(e -> {
+
+        board.back.addActionListener(e -> {
             menu.display(); 
             board.undisplay(); // Close the board window 
            
