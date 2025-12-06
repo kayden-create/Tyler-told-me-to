@@ -14,7 +14,8 @@ import java.awt.GridLayout;
 public class Board extends JFrame {
     JPanel myboard;
     public JPanel squares;
-   JButton back;
+    JButton back;
+
     public Board() {
        
         setTitle("Kayden's Chess Board");
@@ -145,6 +146,7 @@ public class Board extends JFrame {
         setResizable(false); 
         setVisible(true); 
     }
+
   void undisplay() {
         setVisible(false);
     }
