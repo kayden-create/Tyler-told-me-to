@@ -21,7 +21,7 @@ public class Game {
         for(int i = 0; i < 2; i++) {
             for(int j = 0; j < 16; j++) {
                 if(i == 0) {
-                    pieces[i][j] = new Pawn(PieceColor.BLACK);
+                    pieces[i][j] = new Knight(PieceColor.BLACK);
                     if(j < 8) {
                         pieces[i][j].setBounds(118 + 71 * j, 116 + 71 * i, 50, 50); // Set bounds for each piece
                     } else {
@@ -31,7 +31,7 @@ public class Game {
                     // Initialize pieces for player 1
                 }
                 else {
-                    pieces[i][j] = new Pawn(PieceColor.WHITE); 
+                    pieces[i][j] = new Knight(PieceColor.WHITE);
                     if(j < 8) {
                         pieces[i][j].setBounds(118 + 71 * j,447 + 71 * i, 50, 50); // Set bounds for each piece
                     } else {
