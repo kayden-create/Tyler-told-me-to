@@ -65,7 +65,7 @@ public class Game {
         board.back.addActionListener(e -> {
             menu.display(); 
             board.undisplay(); // Close the board window 
-           
+    
         });
         
 
