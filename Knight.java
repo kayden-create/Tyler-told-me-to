@@ -43,13 +43,13 @@ public class Knight implements Piece {
 
     @Override
     public void canMove(/*Put in target square to move to */) {
-        // Implementation for checking if the pawn can move to the target square
-        System.out.println("Checking if pawn can move to the target square.");
+        // Implementation for checking if the knight can move to the target square
+        System.out.println("Checking if knight can move to the target square.");
     }
 
     @Override
     public PieceType getType(){
-        return PieceType.PAWN;
+        return PieceType.KNIGHT;
     }
 
     @Override

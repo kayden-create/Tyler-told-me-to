@@ -3,25 +3,25 @@ import java.awt.Image;
 import javax.swing.JLabel;
 //import javax.swing.JFrame;
 
-public class Bishop implements Piece {
+public class Rook implements Piece {
     Image image;
     ImageIcon icon;
     JLabel label;
     PieceColor color;
 
-    public Bishop(PieceColor color) {
-        // Initialize the Bishop image
+    public Rook(PieceColor color) {
+        // Initialize the Rook image
         if(color == PieceColor.BLACK){
             if(Util.osIsWindows()) {
-                icon = new ImageIcon("img\\bishop.png");
+                icon = new ImageIcon("img\\Rook.png");
             } else {
-                icon = new ImageIcon("img/bishop.png");
+                icon = new ImageIcon("img/Rook.png");
             }
         } else {
             if(Util.osIsWindows()) {
-                icon = new ImageIcon("img\\white-bishop.png");
+                icon = new ImageIcon("img\\white-rook.png");
             } else {
-                icon = new ImageIcon("img/white-bishop.png");
+                icon = new ImageIcon("img/white-rook.png");
             }
         }
 
@@ -43,13 +43,13 @@ public class Bishop implements Piece {
 
     @Override
     public void canMove(/*Put in target square to move to */) {
-        // Implementation for checking if the Bishop can move to the target square
-        System.out.println("Checking if Bishop can move to the target square.");
+        // Implementation for checking if the Rook can move to the target square
+        System.out.println("Checking if Rook can move to the target square.");
     }
 
     @Override
     public PieceType getType(){
-        return PieceType.BISHOP;
+        return PieceType.ROOK;
     }
 
     @Override
